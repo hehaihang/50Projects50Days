@@ -1,0 +1,92 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #F0F0F0;
+}
+h1{
+    margin: 50px 0 30px;
+    text-align: center;
+}
+.faq-container{
+    margin: 0 auto;
+    max-width: 600px;
+}
+.faq{
+    border: 1px solid #9fa4a8;
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    transition: .3s ease;
+}
+.faq.active{
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1),0 6px 6px rgba(0, 0, 0, 0.1);
+}
+.faq.active::before,
+.faq.active::after{
+    content: '\f075';
+    color: #2ecc71;
+    font-size: 7rem;
+    font-family: 'Font Awesome 5 free';
+    position: absolute;
+    opacity: 0.2;
+    top: 20px;
+    left: 20px;
+    z-index: 0;
+}
+.faq.active::before{
+    color: #3498db;
+    top: -10px;
+    left: -30px;
+    transform: rotateY(180deg);
+}
+.faq-title{
+    margin: 0 35px 0 0;
+}
+.faq-text{
+    display: none;
+    margin: 0;
+    margin-top: 30px;
+}
+.faq.active .faq-text{
+    display: block;
+}
+.faq-toggle{
+    background-color: transparent;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    font-size: 16px;
+    padding: 0;
+    line-height: 30px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+.faq-toggle .icon-guanbi1{
+    display: none;
+}
+.active .faq-toggle .icon-a-xiala2{
+    display: none;
+}
+.active .faq-toggle{
+    background-color: #9fa4a8;
+    color: #fff;
+}
+.active .faq-toggle .icon-guanbi1{
+    display: block;
+}
+/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+    font-family: 'iconfont';  /* Project id 3980393 */
+    src: url('//at.alicdn.com/t/c/font_3980393_lmsfmn2df1.woff2?t=1690184111783') format('woff2'),
+         url('//at.alicdn.com/t/c/font_3980393_lmsfmn2df1.woff?t=1690184111783') format('woff'),
+         url('//at.alicdn.com/t/c/font_3980393_lmsfmn2df1.ttf?t=1690184111783') format('truetype');
+  }
